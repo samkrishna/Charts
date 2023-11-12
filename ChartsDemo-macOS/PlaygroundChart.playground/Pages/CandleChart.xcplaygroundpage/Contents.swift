@@ -70,7 +70,7 @@ for i in 0..<ITEM_COUNT
     let even: Bool = i % 2 == 0
     
     entries.append(CandleChartDataEntry(x: Double(i), shadowH: Double(val + high), shadowL: Double(val - low), open: Double(even ? val + open : val - open), close: Double(even ? val - close : val + close)))
-    }
+}
 //: ### CandleChartDataSet
 let set = CandleChartDataSet(values: entries, label: "Candle DataSet")
 set.colors = [#colorLiteral(red: 0.313725490196078, green: 0.313725490196078, blue: 0.313725490196078, alpha: 1.0)]
