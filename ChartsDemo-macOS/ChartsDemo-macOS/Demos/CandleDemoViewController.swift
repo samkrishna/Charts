@@ -26,21 +26,23 @@ open class CandleDemoViewController: NSViewController
             let df = DateFormatter()
             df.dateFormat = "yyyy-MM-dd HH:mm:ss ZZ"
 
-            let close_dateIdx = 2
             let openIdx = 4
             let highIdx = 5
             let lowIdx = 6
             let closeIdx = 7
-            let askIdx = 8
-            let bidIdx = 9
+            var bars = Array<CandleChartDataEntry>()
 
-            for bar in try db.prepare(statement) {
-                let moment = bar[2] as! Double
-                let close_date = Date(timeIntervalSince1970: moment)
-                let date_string = df.string(from: close_date)
-                print("the close date: \(date_string)")
+            for row in try db.prepare(statement) {
+                let open = row[openIdx] as! Double
+                let high = row[highIdx] as! Double
+                let low = row[lowIdx] as! Double
+                let close = row[closeIdx] as! Double
+
+                let bar = CandleChartDataEntry(x: 1.0, shadowH: high, shadowL: low, open: open, close: close)
+                bars.append(bar)
             }
 
+            assert(bars.count == 120)
         } catch {
             print (error)
         }
