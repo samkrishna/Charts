@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,8 @@
 		65B3F6421C73B4F5000983D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B3F6411C73B4F5000983D0 /* AppDelegate.swift */; };
 		65B3F6461C73B4F5000983D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65B3F6451C73B4F5000983D0 /* Assets.xcassets */; };
 		65B3F6491C73B4F5000983D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65B3F6471C73B4F5000983D0 /* Main.storyboard */; };
+		6F38B4652AF486C7002D934B /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 6F38B4642AF486C7002D934B /* SQLite */; };
+		6F38B4682AF4875B002D934B /* CandleDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F38B4672AF4875B002D934B /* CandleDemoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,7 @@
 		65B3F6451C73B4F5000983D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65B3F6481C73B4F5000983D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		65B3F64A1C73B4F5000983D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F38B4672AF4875B002D934B /* CandleDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleDemoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F38B4652AF486C7002D934B /* SQLite in Frameworks */,
 				06FF5D7C29BD10FA0002256E /* DGCharts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,6 +109,7 @@
 				5B9A0C3B1C83AB2100ED8ED8 /* LineDemoViewController.swift */,
 				5B9A0C3D1C83AB2B00ED8ED8 /* RadarDemoViewController.swift */,
 				5B9A0C3F1C83AB3400ED8ED8 /* PieDemoViewController.swift */,
+				6F38B4672AF4875B002D934B /* CandleDemoViewController.swift */,
 			);
 			path = Demos;
 			sourceTree = "<group>";
@@ -158,6 +163,9 @@
 				0630AE8F1D8128A5008859B0 /* PBXTargetDependency */,
 			);
 			name = "ChartsDemo-macOS";
+			packageProductDependencies = (
+				6F38B4642AF486C7002D934B /* SQLite */,
+			);
 			productName = "ChartsDemo-OSX";
 			productReference = 65B3F63E1C73B4F5000983D0 /* ChartsDemo-macOS.app */;
 			productType = "com.apple.product-type.application";
@@ -188,6 +196,9 @@
 				Base,
 			);
 			mainGroup = 65B3F6351C73B4F5000983D0;
+			packageReferences = (
+				6F38B4632AF486C7002D934B /* XCRemoteSwiftPackageReference "SQLite.swift" */,
+			);
 			productRefGroup = 65B3F63F1C73B4F5000983D0 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
@@ -237,6 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F38B4682AF4875B002D934B /* CandleDemoViewController.swift in Sources */,
 				65B3F6421C73B4F5000983D0 /* AppDelegate.swift in Sources */,
 				5B9A0C3E1C83AB2B00ED8ED8 /* RadarDemoViewController.swift in Sources */,
 				5B9A0C3A1C83AB1800ED8ED8 /* BarDemoViewController.swift in Sources */,
@@ -371,7 +383,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -387,7 +400,10 @@
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/ChartsDemo-macOS/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dcg.ChartsDemo-OSX";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -407,7 +423,10 @@
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/ChartsDemo-macOS/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dcg.ChartsDemo-OSX";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -438,6 +457,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6F38B4632AF486C7002D934B /* XCRemoteSwiftPackageReference "SQLite.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.14.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6F38B4642AF486C7002D934B /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6F38B4632AF486C7002D934B /* XCRemoteSwiftPackageReference "SQLite.swift" */;
+			productName = SQLite;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 65B3F6361C73B4F5000983D0 /* Project object */;
 }

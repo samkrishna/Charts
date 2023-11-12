@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22154"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -609,8 +609,8 @@
                                                 <action selector="performMiniaturize:" target="Ady-hI-5gd" id="VwT-WD-YPe"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Zoom" id="R4o-n2-Eq4">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        <menuItem title="Zoom" keyEquivalent="z" id="R4o-n2-Eq4">
+                                            <modifierMask key="keyEquivalentModifierMask" control="YES" option="YES"/>
                                             <connections>
                                                 <action selector="performZoom:" target="Ady-hI-5gd" id="DIl-cC-cCs"/>
                                             </connections>
@@ -669,15 +669,38 @@
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
+        <!--Candle-->
+        <scene sceneID="qtQ-Sx-A3w">
+            <objects>
+                <viewController id="HeS-DP-YXT" userLabel="Candle" customClass="CandleDemoViewController" customModule="ChartsDemo_macOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="Meh-Zy-xCS">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dJl-0Y-MbK" customClass="CandleStickChartView" customModule="DGCharts">
+                                <rect key="frame" x="3" y="0.0" width="444" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </customView>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="candleChartView" destination="dJl-0Y-MbK" id="QsL-nd-h6i"/>
+                    </connections>
+                </viewController>
+                <customObject id="SGq-l8-bM1" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1295" y="-55"/>
+        </scene>
         <!--Tab View Controller-->
         <scene sceneID="D8r-LN-ETo">
             <objects>
-                <tabViewController selectedTabViewItemIndex="3" id="MdU-M1-yR2" sceneMemberID="viewController">
+                <tabViewController selectedTabViewItemIndex="0" id="MdU-M1-yR2" sceneMemberID="viewController">
                     <tabViewItems>
                         <tabViewItem label="Bar" identifier="" id="75m-u6-Lg4"/>
-                        <tabViewItem identifier="" id="Yby-Hr-Gbs"/>
-                        <tabViewItem id="1nR-kL-Mxb"/>
-                        <tabViewItem id="WOB-FI-izp"/>
+                        <tabViewItem identifier="" id="Yby-Hr-Gbs" userLabel="Line"/>
+                        <tabViewItem id="1nR-kL-Mxb" userLabel="Radar"/>
+                        <tabViewItem id="WOB-FI-izp" userLabel="Pie"/>
+                        <tabViewItem id="5oF-6f-RFt"/>
                     </tabViewItems>
                     <tabView key="tabView" type="noTabsNoBorder" id="4aI-t7-jgI">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
@@ -693,16 +716,17 @@
                         <segue destination="vkP-1b-D8k" kind="relationship" relationship="tabItems" id="gGD-RY-5OB"/>
                         <segue destination="CQR-9h-gXY" kind="relationship" relationship="tabItems" id="rqo-tR-9a7"/>
                         <segue destination="KI5-K5-PrY" kind="relationship" relationship="tabItems" id="pWA-3O-1hN"/>
+                        <segue destination="HeS-DP-YXT" kind="relationship" relationship="tabItems" id="lkA-9F-ulU"/>
                     </connections>
                 </tabViewController>
                 <customObject id="VRA-wT-PQh" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="726" y="432"/>
         </scene>
-        <!--Bar Demo View Controller-->
+        <!--Bar-->
         <scene sceneID="A6I-3s-knM">
             <objects>
-                <viewController title="Bar Demo View Controller" id="4fu-uG-om0" customClass="BarDemoViewController" customModule="ChartsDemo_macOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Bar Demo View Controller" id="4fu-uG-om0" userLabel="Bar" customClass="BarDemoViewController" customModule="ChartsDemo_macOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="U2J-4p-9ti">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
