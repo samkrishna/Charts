@@ -95,10 +95,10 @@ open class CandleChartDataSet: LineScatterCandleRadarChartDataSet, CandleChartDa
     /// color for open == close
     open var neutralColor: NSUIColor?
     
-    /// color for open > close
+    /// color for open < close
     open var increasingColor: NSUIColor?
     
-    /// color for open < close
+    /// color for open > close
     open var decreasingColor: NSUIColor?
     
     /// Are increasing values drawn as filled?
