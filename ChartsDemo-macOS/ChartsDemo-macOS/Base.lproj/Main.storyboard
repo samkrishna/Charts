@@ -677,11 +677,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dJl-0Y-MbK" customClass="CandleStickChartView" customModule="DGCharts">
-                                <rect key="frame" x="3" y="0.0" width="444" height="300"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="dJl-0Y-MbK" customClass="CandleStickChartView" customModule="DGCharts">
+                                <rect key="frame" x="5" y="5" width="450" height="290"/>
                             </customView>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="dJl-0Y-MbK" firstAttribute="top" secondItem="Meh-Zy-xCS" secondAttribute="top" constant="5" id="Bra-8k-Hyk"/>
+                            <constraint firstAttribute="bottom" secondItem="dJl-0Y-MbK" secondAttribute="bottom" constant="5" id="pnI-6E-heF"/>
+                            <constraint firstItem="dJl-0Y-MbK" firstAttribute="leading" secondItem="Meh-Zy-xCS" secondAttribute="leading" constant="5" id="rl2-Rd-dsx"/>
+                            <constraint firstItem="dJl-0Y-MbK" firstAttribute="trailing" secondItem="Meh-Zy-xCS" secondAttribute="trailing" constant="5" id="uj6-Af-05n"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="candleChartView" destination="dJl-0Y-MbK" id="QsL-nd-h6i"/>
