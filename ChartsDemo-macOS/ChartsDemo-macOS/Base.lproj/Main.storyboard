@@ -672,7 +672,7 @@
         <!--Candle-->
         <scene sceneID="qtQ-Sx-A3w">
             <objects>
-                <viewController id="HeS-DP-YXT" userLabel="Candle" customClass="CandleDemoViewController" customModule="ChartsDemo_macOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Candle" id="HeS-DP-YXT" userLabel="Candle" customClass="CandleDemoViewController" customModule="ChartsDemo_macOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="Meh-Zy-xCS">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -689,18 +689,18 @@
                 </viewController>
                 <customObject id="SGq-l8-bM1" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1295" y="-55"/>
+            <point key="canvasLocation" x="916" y="-99"/>
         </scene>
         <!--Tab View Controller-->
         <scene sceneID="D8r-LN-ETo">
             <objects>
-                <tabViewController selectedTabViewItemIndex="0" id="MdU-M1-yR2" sceneMemberID="viewController">
+                <tabViewController selectedTabViewItemIndex="4" id="MdU-M1-yR2" sceneMemberID="viewController">
                     <tabViewItems>
                         <tabViewItem label="Bar" identifier="" id="75m-u6-Lg4"/>
                         <tabViewItem identifier="" id="Yby-Hr-Gbs" userLabel="Line"/>
                         <tabViewItem id="1nR-kL-Mxb" userLabel="Radar"/>
                         <tabViewItem id="WOB-FI-izp" userLabel="Pie"/>
-                        <tabViewItem id="5oF-6f-RFt"/>
+                        <tabViewItem id="5oF-6f-RFt" userLabel="Candle"/>
                     </tabViewItems>
                     <tabView key="tabView" type="noTabsNoBorder" id="4aI-t7-jgI">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
@@ -761,7 +761,7 @@
                 </viewController>
                 <customObject id="DVo-MQ-urk" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1321" y="328"/>
+            <point key="canvasLocation" x="1623" y="701"/>
         </scene>
         <!--Line-->
         <scene sceneID="IGh-XR-taX">
@@ -788,7 +788,7 @@
                 </viewController>
                 <customObject id="wYh-tX-8oy" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1321" y="689"/>
+            <point key="canvasLocation" x="1623" y="1130"/>
         </scene>
         <!--Radar-->
         <scene sceneID="jjT-Es-ofe">

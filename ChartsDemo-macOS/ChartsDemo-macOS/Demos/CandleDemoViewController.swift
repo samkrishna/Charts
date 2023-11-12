@@ -16,6 +16,8 @@ open class CandleDemoViewController: NSViewController
     @IBOutlet var candleChartView: CandleStickChartView!
 
     override open func viewDidLoad() {
+        super.viewDidLoad()
+        
         do {
             let path = "/Users/achilles/Documents/SingularityOne/Databases/timebars.sqlite"
             let db = try Connection(path, readonly: true)
